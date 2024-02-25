@@ -18,12 +18,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/joshuamichaelson/Documents/IS413/Mission07_Michaelson/Mission07_Michaelson
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/joshuamichaelson/Documents/IS413/Mission07_Michaelson/Mission07_Michaelson/Views/Home/AboutJoel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BYm91dEpvZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshuamichaelson/Documents/IS413/Mission07_Michaelson/Mission07_Michaelson/Views/Home/AddMovie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZGRNb3ZpZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/joshuamichaelson/Documents/IS413/Mission07_Michaelson/Mission07_Michaelson/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/joshuamichaelson/Documents/IS413/Mission07_Michaelson/Mission07_Michaelson/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joshuamichaelson/Documents/IS413/Mission07_Michaelson/Mission07_Michaelson/Views/Home/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/joshuamichaelson/Documents/IS413/Mission07_Michaelson/Mission07_Michaelson/Views/Shared/Error.cshtml]

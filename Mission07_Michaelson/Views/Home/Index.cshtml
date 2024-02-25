@@ -1,8 +1,23 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container text-center mt-5">
+    <h1 class="display-4 mb-4">Joel Hilton Film Collection</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <img src="img/JoelHiltonHeadshot.jpg" alt="Joel Hilton" class="img-fluid rounded-circle mb-4" style="max-height: 400px;">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <p class="lead">Welcome to the film collection of Joel Hilton, a movie connoisseur who meticulously curates his selection of films.</p> 
+            <p>Explore the collection, discover new favorites, and learn more about Joel's passion for cinema.</p>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <a href="@Url.Action("AboutJoel", "Home")" class="btn btn-primary btn-lg">Get to know Joel</a>
+        </div>
+    </div>
 </div>

@@ -6,16 +6,32 @@ namespace Mission07_Michaelson.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    private MovieCollectionContext _context; // set up instance of database
+    public HomeController(MovieCollectionContext temp) 
     {
-        _logger = logger;
+        _context = temp; // assign instance to the current database
     }
-
     public IActionResult Index()
     {
         return View();
+    }
+
+    public IActionResult AboutJoel()
+    {
+        return View();
+    }
+    [HttpGet]
+    public IActionResult AddMovie()
+    {
+        return View();
+    }
+    [HttpPost]
+    public IActionResult AddMovie(Movie movie)
+    {
+        _context.Movies.Add(movie); // add record to database
+        _context.SaveChanges();
+        return View("Success", movie);
     }
 
     public IActionResult Privacy()

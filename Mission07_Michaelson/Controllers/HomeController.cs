@@ -42,6 +42,32 @@ public class HomeController : Controller
         ViewBag.Categories = _context.Categories.OrderBy(c => c.CategoryName).ToList();
         return View(movies);
     }
+    [HttpGet]
+    public IActionResult Edit(int id)
+    {
+        var Movie = _context.Movies.Single(m => m.MovieId == id);
+        ViewBag.Categories = _context.Categories.OrderBy(c => c.CategoryName).ToList();
+        return View("MovieNewEdit", Movie);
+    }
+    [HttpPost]
+    public IActionResult Edit(Movie movie)
+    {
+        _context.Update(movie);
+        _context.SaveChanges();
+        return RedirectToAction("ViewCollection");
+    }
+
+    public IActionResult ConfirmDelete(int id)
+    {
+        var movie = _context.Movies.Single(m => m.MovieId == id);
+        return View("Delete", movie);
+    }
+    public IActionResult Delete(Movie movie)
+    {
+        _context.Movies.Remove(movie);
+        _context.SaveChanges();
+        return RedirectToAction("ViewCollection");
+    }
     public IActionResult Privacy()
     {
         return View();

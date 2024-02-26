@@ -6,7 +6,8 @@
 
 <div class="container">
     <h2>Add Movie</h2>
-    <form asp-action="AddMovie" method="post">
+    <form method="post">
+        <input type="hidden" asp-for="MovieId">
         <div class="form-group">
             <label>Title:</label>
             <input type="text" class="form-control" asp-for="Title" required>
@@ -58,6 +59,6 @@
             <textarea class="form-control" asp-for="Notes" maxlength="25"></textarea>
         </div>
         <br>
-        <button type="submit" class="btn btn-primary">Add Movie</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

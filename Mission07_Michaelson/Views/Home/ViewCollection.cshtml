@@ -1,0 +1,60 @@
+@model List<Movie>;
+
+<h1>Behold, the Collection:</h1>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Director</th>
+                <th>Rating</th>
+                <th>Edited</th>
+                <th>Lent To</th>
+                <th>Notes</th>
+                <th>Plex</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <td>@movie.Title</td>
+                    <td>@movie.Year</td>
+                    <td>@movie.Director</td>
+                    <td>@movie.Rating</td>
+                    @if (movie.Edited == true)
+                    {
+                        <td>yes</td>
+                    }
+                    else
+                    {
+                        <td>no</td>
+                    }
+                    <td>@movie.LentTo</td>
+                    <td>@movie.Notes</td>
+                    @if (movie.CopiedToPlex)
+                    {
+                        <td>yes</td>
+                    }
+                    else
+                    {
+                        <td>no</td>
+                    }
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-action="Edit" asp-route-id="@movie.MovieId">Edit</a>                    
+                    </td>
+                    <td>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@movie.MovieId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <a class="btn btn-success" asp-action="Create">Add New Movie</a>
+</div>

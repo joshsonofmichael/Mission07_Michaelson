@@ -24,7 +24,8 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult AddMovie()
     {
-        return View();
+        ViewBag.Categories = _context.Categories.OrderBy(c => c.CategoryName).ToList();
+        return View("MovieNewEdit");
     }
     [HttpPost]
     public IActionResult AddMovie(Movie movie)
@@ -33,7 +34,14 @@ public class HomeController : Controller
         _context.SaveChanges();
         return View("Success", movie);
     }
-
+    public IActionResult ViewCollection()
+    {
+        var movies = _context.Movies
+        .OrderBy(m => m.Title)
+        .ToList();
+        ViewBag.Categories = _context.Categories.OrderBy(c => c.CategoryName).ToList();
+        return View(movies);
+    }
     public IActionResult Privacy()
     {
         return View();
